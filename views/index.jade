@@ -1,0 +1,113 @@
+extends layout
+
+block content
+	div#wrapper
+		div#sidebar-wrapper
+			ul.sidebar-nav
+				li.feelinglucky
+					a(href="feelinglucky") Feeling Lucky !
+						img.dice#feelinglucky(src="/images/dice.png")
+				li
+					div.checkbox
+						label(for="sortByDistance") Order By Distance
+						input#sortByDistance(type="checkbox" userLatitude='#{userLatitude}' userLongitude='#{userLongitude}')
+				//- li.hrLineBreak
+				//- 	hr(align="left" width="100%")
+				//- li.sidebar-brand Tegundir
+				li.hrLineBreak
+					hr(align="left" width="100%")
+				li
+					div.checkbox
+						label(for="all") Everything
+						input#all(type="checkbox" checked)
+				li.hrLineBreak
+					hr(align="left" width="100%")
+				li
+					div.checkbox
+						label(for="pizza") Pizza
+						input#pizza.check(type="checkbox" checked)
+				li
+					div.checkbox
+						label(for="hamburger") Burger
+						input#hamburger.check(type="checkbox" checked)
+				li
+					div.checkbox
+						label(for="sushi") Sushi
+						input#sushi.check(type="checkbox" checked)
+				li
+					div.checkbox
+						label(for="seafood") Seafood
+						input#seafood.check(type="checkbox" checked)
+				li
+					div.checkbox
+						label(for="steak") Steak
+						input#steak.check(type="checkbox" checked)
+				li
+					div.checkbox
+						label(for="indian") Indian
+						input#indian.check(type="checkbox" checked)
+				li
+					div.checkbox
+						label(for="italian") Italian
+						input#italian.check(type="checkbox" checked)
+				li
+					div.checkbox
+						label(for="asian") Asian
+						input#asian.check(type="checkbox" checked)
+				li
+					div.checkbox
+						label(for="fastfood") Fast Food
+						input#fastfood.check(type="checkbox" checked)
+				li
+					div.checkbox
+						label(for="fancy") Fancy
+						input#fancy.check(type="checkbox" checked)
+				li
+					div.checkbox
+						label(for="healthy") Healthy
+						input#healthy.check(type="checkbox" checked)
+				//- li
+				//- 	button#contactButton.btn.btn-default.btn-lg(data-toggle="modal" data-target="#contact") Hafa samband
+	button#slide.btn.btn-default.btn-sq-lg.btn-xl.hidden-xs >
+	div#contact.modal.fade(role="dialog")
+		div.modal-dialog
+			div.modal-content
+				form.form-horizontal(action="MAILTO:ivansc91@gmail.com" method="post" enctype="text/plain")
+					div.modal-header
+						h4 Hafa Samband
+					div.modal-body
+						div.form-group
+							label.col-lg-2.control-label(for="contact-name") Nafn:
+							div.col-lg-10
+								input#contact-name.form-control(placeholder="Nafn")
+						div.form-group
+							label.col-lg-2.control-label(for="contact-email") Netfang:
+							div.col-lg-10
+								input#contact-email.form-control(type="email" placeholder="Netfangið þitt")
+						div.form-group
+							label.col-lg-2.control-label(for="contact-msg") Skilaboð:
+							div.col-lg-10
+								textarea#contact-msg.form-control(rows="10")
+					div.modal-footer
+						a.btn.btn-default(data-dismiss="modal") Close
+						button.btn.btn-primary(type="submit") Senda
+	div.container-fluid
+		div.row.res-data
+	<div id="ajaxloader"></div>
+
+	script(type='text/javascript').
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-71912211-1', 'auto');
+		ga('send', 'pageview');
+
+
+
+
+
+
+
+
