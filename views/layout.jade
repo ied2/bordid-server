@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(href='/stylesheets/Bootstrap/bootstrap.css', rel='stylesheet')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/navbar.css')
+    link(rel='stylesheet', href='/stylesheets/simple-sidebar.css')
+    script(type='text/javascript' src='/javascripts/jquery.js')
+    script(type='text/javascript' src='/javascripts/bootstrap/Bootstrap.js')
+    script(type='text/javascript' src='/javascripts/simple-sidebar.js')
+    script(type='text/javascript' src='/javascripts/main.js')
+  body
+    div.navbar.navbar-inverse.navbar-fixed-top.shadow
+        div.navbar-header
+            button.navbar-toggle.slideOptions(type="button")
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            a.navbar-brand.hidden-xs.navbar-left(href="/") Svangur
+            a.navbar-brand.visible-xs.navbar-left(href="/") Svangur
+            div.navbar-form.navbar-header
+                div.input-group
+                    input#distanceInput.form-control(type="number" value="2")
+                    div.input-group-btn
+                        button#searchButton.btn.btn-default Search
+    block content

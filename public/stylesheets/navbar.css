@@ -1,0 +1,137 @@
+/*Litur*/
+.navbar-inverse {
+    background-color: #252839;
+    border-color: #080808;
+}
+
+@media(max-width:767px) {
+    .navbar .navbar-form {
+        width: 185px;
+        padding-left:0;
+        padding-right:0;
+    }
+}
+
+@media(min-width:768px) {
+    .navbar .navbar-form {
+        width: 250px;
+    }
+}
+
+.navbar-header {
+    /*width: 100%;*/
+    margin: 0 0;
+}
+
+.navbar .navbar-form {
+    padding-top: 8px;
+    padding-bottom: 0;
+    margin-right: 0;
+    margin-left: 0;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+/*Valmöguleikar*/
+/* a {
+    color: #9d9d9d;
+}
+
+ a:hover,  a:focus {
+    color: #fff;
+    background-color: transparent;
+    text-decoration: none;
+}*/
+
+/*.dice:hover {*/
+    /*margin-top: 3px;*/
+    /*max-height: 45px;*/
+    /*max-width: 45px;*/
+/*}*/
+
+/*Stærð á searchbar, lítill skjár*/
+@media (max-width: 767px) {
+.navbar .navbar-form {
+    width: 220px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/*Stærð á searchbar, stór skjár*/
+@media (min-width: 768px) {
+.navbar .navbar-form {
+    width: 180px;
+  }
+}
+
+/*Width*/
+@media (min-width: 768px) {
+  .container {
+    width: 100%; /*750px*/
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 100%; /*970px*/
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 100%; /*1000px*/
+  }
+  /*navbar max 1000px*/
+ /* .navbar-inverse {
+    width: 1000px;
+    margin: 0 auto;
+    }*/
+}
+
+
+
+/*No collapse*/
+
+/*Logo*/
+.navbar-brand {
+    float: right;
+}
+
+/*Open sidebar*/
+.slideOptions {
+    margin-left: 13px;
+    float: left;
+}
+
+/*Shadow line under navbar*/
+
+.shadow {
+    box-shadow: 0 4px 4px -2px #232323;
+    -moz-box-shadow: 0 4px 4px -2px #232323;
+    -webkit-box-shadow: 0 4px 4px -2px #232323;
+}
+
+/*Back button*/
+
+.btn.pri.btn-xs {
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+    background: #252839;
+    margin-top: 13px;
+    margin-left: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-color: rgb(60, 61, 90);
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+/*.btn.pribtn-xs { background: #59d; }
+
+.btn.pribtn-xs:hover { background: #48c; }*/
+
+.feel { margin-top: 10px !important; }
+
+

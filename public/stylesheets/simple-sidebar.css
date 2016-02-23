@@ -1,0 +1,272 @@
+/*!
+ * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Toggle Styles */
+
+/*Lítill skjár*/
+/*Toggled = opinn bar*/
+
+/*Litur*/
+#sidebar-wrapper {
+    background: #252839 !important;
+}
+
+#wrapper {
+    padding-left: 0;
+}
+
+#wrapper.toggled {
+    padding-left: 0px; /*Bar opinn, bilið á milli sidebar og content*/
+}
+@media(min-width:768px) {
+    #sidebar-wrapper {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    }
+}
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0.1px; /*Bar lokaður, sést smá í hann*/
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #000;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px; /*Bar opinn, width á honum*/
+    opacity: 0.9;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+/* Sidebar Styles */
+
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {
+     /*position: ; !important;*/
+     margin-left: 0px; !important;
+    top: 5px;
+}
+
+.checkbox {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.feelinglucky > label {
+    padding-left: 20px;
+    font-weight: normal;
+}
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding-top: 20px;
+}
+
+.sidebar-nav li {
+    /*text-indent: 20px;*/
+    color:white;
+    line-height: 30px;
+}
+
+.sidebar-nav  {
+    /*text-indent: 20px;*/
+    line-height: 30px;
+}
+
+.sidebar-nav label {
+    font-size: 1em;
+    margin-right: 15px;
+}
+
+.sidebar-nav li a {
+    font-size: 1em;
+/*    margin-top: 20px;*/
+    padding-left: 20px;
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    /*background: rgba(255,255,255,0.2);*/
+    cursor: pointer;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.sidebar-nav > .sidebar-brand {
+    /*height: 65px;*/
+    font-size: 25px;
+    /*line-height: 60px;*/
+    margin-top:10px;
+    color: #999999;
+    margin-left: 18px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+/*Stór skjár*/
+/*Toggled = opinn bar*/
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 0px; /*Bar lokaður, bilið á milli sidebar og content*/
+    }
+
+    #wrapper.toggled {
+        padding-left: 0px;
+    }
+
+    #sidebar-wrapper {
+        width: 0.1px; /*Bar lokaður, sést smá í barinn*/
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 250px; /*Bar opinn, breidd á sidebar þegar hann er opinn*/
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+
+/*Line break*/
+
+.hrLineBreak {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+hr {
+    border-color: gray;
+}
+/*Items*/
+
+#pizza.toggled {
+    background: #999999;
+    opacity: 0.5;
+    color: #fff;
+}
+
+#burger.toggled {
+    background: #999999;
+    opacity: 0.5;
+    color: #fff;
+}
+
+/*button slider*/
+
+@media(min-width:768px) {
+    #slide {
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+}
+
+#slide.toggled {
+    left: 0px;
+    top: 45%;
+    /*margin: auto auto;*/
+    position: fixed;
+    margin-left: 255px;
+    opacity: 0.9;
+    /*background: #252839 !important;*/
+}
+
+#slide {
+    left: 0px;
+    top: 45%;
+    background-color: rgba(255, 255, 255, 0.4);
+    position: fixed;
+    margin-left: 5px;
+    opacity: 0.9;
+    z-index: 1;
+    font-size: 2em;
+}
+
+#contactButton {
+    background-color: rgba(255, 255, 255, 0.6);
+    margin-left: 20px;
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;}
+
+.btn-circle.btn-lg {
+    width: 50px;
+    height: 50px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height:1.33;
+    border-radius: 25px;}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn-sq-lg {
+    width: 50px !important;
+    height: 140px !important;
+}
+
+.dice {
+    margin-left: 15px;
+    height: 30px;
+    width: 30px;
+}
+
+.diceTab {
+    margin-top: 5px;
+    margin-left: 15px;
+    height: 40px;
+    width: 40px;
+}

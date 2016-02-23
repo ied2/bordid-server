@@ -5,23 +5,29 @@ var router = express.Router();
 
 var utils = require('../lib/utils');
 
-router.get('/', index);
-router.get('/error', error);
-router.get('/getRestaurants', getRestaurants);
-router.get('/:id([0-9]{1,8})', info);
-router.get('/feelinglucky', feelingLucky);
-router.get('/addrestaurant', addRestaurant);
-router.post('/addrestaurant', addRestaurantPost);
-router.get('/test', test);
+// router.get('/', index);
+// router.get('/error', error);
+// router.get('/getRestaurants', getRestaurants);
+// router.get('/:id([0-9]{1,8})', info);
+// router.get('/feelinglucky', feelingLucky);
+// router.get('/addrestaurant', addRestaurant);
+// router.post('/addrestaurant', addRestaurantPost);
+router.get('/', user);
 
 module.exports = router;
 
 /** route middlewares **/
 
 
-function test(req, res) {
+function user(req, res) {
 
-    res.send("hello");;
+  var id = 1;
+  
+    utils.user(id, function (err, all) {
+    console.log(all);
+    console.log(err);
+    res.send(all);
+  });
 }
 
 
@@ -95,7 +101,7 @@ function index(req, res, next) {
 }
 
 function info(req, res, next) {
-	var id = req.params.id;
+  var id = req.params.id;
   var userLatitude = req.session.userLatitude;
   var userLongitude = req.session.userLongitude;
 
@@ -116,7 +122,7 @@ function info(req, res, next) {
     if(phoneNumber == "NULL") phoneNumber = "";
 
     res.render('info', {title: 'Svangur', name: all[0].name, address: all[0].address, phoneNumber: phoneNumber,
-    										url: url, logo: all[0].logo, latitude : all[0].horizontal, longitude: all[0].vertical,
+                        url: url, logo: all[0].logo, latitude : all[0].horizontal, longitude: all[0].vertical,
                         userLatitude: userLatitude, userLongitude: userLongitude});
   });
 }

@@ -1,0 +1,52 @@
+doctype html
+html
+	head
+		title= title
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		link(href='/stylesheets/Bootstrap/bootstrap.css', rel='stylesheet')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='/stylesheets/navbar.css')
+		link(rel='stylesheet', href='/stylesheets/simple-sidebar.css')
+		script(type='text/javascript' src='/javascripts/jquery.js')
+		script(type='text/javascript' src='/javascripts/bootstrap/Bootstrap.js')
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+		script(src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false")
+		script(type='text/javascript' src='/javascripts/info.js')
+		script(type='text/javascript' src='/javascripts/modernizr.js')
+	body
+		div.navbar.navbar-inverse.navbar-fixed-top.shadow
+			div.navbar-header
+				button#backButton.feel.btn.pri.btn-xs.hidden-sm.hidden-md.hidden-lg Back
+				a(href="feelinglucky")
+					img.diceTab#feelinglucky(src="/images/dice.png")
+				a.navbar-brand.hidden-xs.navbar-left(href="javascript:history.back()") Svangur
+				a.navbar-brand.visible-xs.navbar-left(href="javascript:history.back()") Svangur
+	div#container-fluid-info.container-fluid
+		div.row
+			div.container-logo.col-xs-12.col-sm-6
+				img(src='#{logo}')
+			div.container-information.col-xs-12.col-sm-6
+				ul
+					li.name-container
+						span #{name}
+					li.address-container
+						span #{address}
+					li.phone-container
+						span
+							img.phone(src="/images/phone.png")
+							if phoneNumber
+								span #{phoneNumber}
+					li.URL-container
+						span
+							img.hyperlink(src="/images/hyperlink.png")
+							if url
+								a(href="http://www.#{url}") #{url}
+		div.container-map.col-xs-12
+			div.button-center
+				button#driving.btn.btn-default Keyra
+				button#walking.btn.btn-default Ganga
+			div#map(userLatitude='#{userLatitude}' userLongitude='#{userLongitude}' latitude='#{latitude}' longitude='#{longitude}')
+		div.button-center.col-xs-12
+			button#backButton.btn.btn-default Til baka

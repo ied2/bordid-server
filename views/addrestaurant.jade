@@ -1,0 +1,101 @@
+doctype html
+html
+	head
+		title= title
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		link(href='/stylesheets/Bootstrap/bootstrap.css', rel='stylesheet')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='/stylesheets/navbar.css')
+		script(type='text/javascript' src='/javascripts/jquery.js')
+		script(type='text/javascript' src='/javascripts/bootstrap/Bootstrap.js')
+	body
+		div.navbar.navbar-inverse.navbar-fixed-top.shadow
+			div.navbar-header
+				button#backButton.feel.btn.pri.btn-xs.hidden-sm.hidden-md.hidden-lg Back
+				a.navbar-brand.hidden-xs.navbar-left(href="javascript:history.back()") Svangur
+				a.navbar-brand.visible-xs.navbar-left(href="javascript:history.back()") Svangur
+		div
+			form.addform(role="form" action="/addrestaurant" method="post")
+				if post
+					if !success
+						p.failed(style="font-size:30px; color:red") Error, adding restaurant!
+					else
+						p.success(style="font-size:30px; color:green") Restaurant added!
+				div.col-xs-12
+					div.col-xs-12.col-md-3
+						label(for="name") Name(String)
+						input.form-control#name(type="text" name="name")
+						label(for="address") Address(String)
+						input.form-control#address(type="text" name="address")
+						label(for="city") City(String)
+						input.form-control#city(type="text" name="city")
+						label(for="zip") Zip(int)
+						input.form-control#zip(type="text" name="zip")
+					div.col-xs-12.col-md-3
+						label(for="formattedaddress") Formattedaddress(String)
+						input.form-control#formattedaddress(type="text" name="formattedaddress")
+						label(for="latitude") Latitude(Double)
+						input.form-control#latitude(type="text" name="latitude")
+						label(for="longitude") Longitude(Double)
+						input.form-control#longitude(type="text" name="longitude")
+						label(for="logo") Logo(String)
+						input.form-control#logo(type="text" name="logo")
+					div.col-xs-12.col-md-3
+						label(for="phonenumber") Phonenumber(int)
+						input.form-control#phonenumber(type="text" name="phonenumber")
+						label(for="url") Url(String)
+						input.form-control#url(type="url" name="url")
+						label(for="pizza") Pizza(0 eða 1)
+						input.form-control#pizza(type="text" name="pizza")
+						label(for="hamburger") hamburger(0 eða 1)
+						input.form-control#hamburger(type="text" name="hamburger")
+					div.col-xs-12.col-md-3
+						label(for="sushi") sushi(0 eða 1)
+						input.form-control#sushi(type="text" name="sushi")
+						label(for="seafood") seafood(0 eða 1)
+						input.form-control#seafood(type="text" name="seafood")
+						label(for="steak") steak(0 eða 1)
+						input.form-control#steak(type="text" name="steak")
+						label(for="indian") indian(0 eða 1)
+						input.form-control#indian(type="text" name="indian")
+					div.col-xs-12.col-md-3
+						label(for="italian") italian(0 eða 1)
+						input.form-control#italian(type="text" name="italian")
+						label(for="american") american(0 eða 1)
+						input.form-control#american(type="text" name="american")
+						label(for="asian") asian(0 eða 1)
+						input.form-control#asian(type="text" name="asian")
+						label(for="french") french(0 eða 1)
+						input.form-control#french(type="text" name="french")
+					div.col-xs-12.col-md-3
+						label(for="vegan") vegan(0 eða 1)
+						input.form-control#vegan(type="text" name="vegan")
+						label(for="vegetarian") vegetarian(0 eða 1)
+						input.form-control#vegetarian(type="text" name="vegetarian")
+						label(for="fastfood") fastfood(0 eða 1)
+						input.form-control#fastfood(type="text" name="fastfood")
+						label(for="fancy") fancy(0 eða 1)
+						input.form-control#fancy(type="text" name="fancy")
+					div.col-xs-12.col-md-3
+						label(for="mexican") mexican(0 eða 1)
+						input.form-control#mexican(type="text" name="mexican")
+						label(for="healthy") healthy(0 eða 1)
+						input.form-control#healthy(type="text" name="healthy")
+				Button.btn.btn-success(type='submit' style="margin: 20px") Submit
+				p Dæmi
+				p Name : Amma Habbý
+				p Address: Aðalgötu 1, 420 Súðavík
+				p City: Reykjavík
+				p zip: 170
+				p Formattedaddress: Súðavík, Iceland
+				p Latitude: 66.0389
+				p Longitude:-22.9878
+				p Phonenumber: 	4565060	
+				p Url: apotekrestaurant.is (ekki www.apotekrestaurant.is)
+				p Pizza: 1
+				p Sushi: 0
+				p ....
+
+
